@@ -17,7 +17,7 @@ const Container = styled.div`
   height: 100vh;
   background-image: url(${pexel});
   background-size: cover;
-  background-repeat: no-repeat ;
+  
   background-position: center;
   
   

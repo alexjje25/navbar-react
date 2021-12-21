@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import logo from './assets/logo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Logo href="">
-        LOGO
+      <Logo >
+      <img src={logo} alt="Logo" srcset="" />
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
@@ -49,6 +49,11 @@ span {
   margin-bottom: 4px;
   border-radius: 5px;
 }
+&:hover {
+     
+     transform: scale(1.2);
+   }
+
 @media (max-width: 768px) {
   display: flex;
 }
@@ -62,11 +67,12 @@ span {
    text-align:center;
    text-decoration: none;
    color: #000;
-   transition: all 0.3s ease-in;
+   transition: transform 0.3s ease-in-out;
    font-size: 0.9rem;
 
    &:hover {
      color: #000;
+     transform: scale(1.2);
    }
   `;
 
@@ -89,10 +95,15 @@ const Logo = styled.a`
   color: #000;
   text-decoration: none;
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 1.7rem; 
+  background-image: url(${logo});
   span {
     font-weight: 300;
     font-size: 1.3rem;
+  }
+  img {
+  width: 30px;
+
   }
 `;
   
