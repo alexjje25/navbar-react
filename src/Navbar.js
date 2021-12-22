@@ -43,8 +43,8 @@ display: none;
 flex-direction: column;
 cursor: pointer;
 span {
-  height: 2px;
-  width: 25px;
+  height: 4px;
+  width: 27px;
   background: #000;
   margin-bottom: 4px;
   border-radius: 5px;
